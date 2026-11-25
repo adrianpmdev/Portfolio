@@ -23,12 +23,12 @@ export class DeviceDetector {
     const isMobileUA = /Mobi|Android|iPhone|iPod|Windows Phone/i.test(ua);
 
     if (isTabletUA || this.looksLikeIpad()) return 'tablet';
-    if (isMobileUA || (this.hasCoarsePointer() && this.window.innerWidth < 768)) return 'movil';
-    return 'ordenador';
+    if (isMobileUA || (this.hasCoarsePointer() && this.window.innerWidth < 768)) return 'mobile';
+    return 'desktop';
   }
 
   isDesktop(): boolean {
-    return this.category() === 'ordenador';
+    return this.category() === 'desktop';
   }
 
   platform(): DevicePlatform {
@@ -50,7 +50,7 @@ export class DeviceDetector {
     if (/Macintosh|Mac OS X/i.test(ua)) return 'macOS';
     if (/Linux/i.test(ua)) return 'Linux';
 
-    return 'Desconocido';
+    return 'Unknown';
   }
 
   private hasCoarsePointer(): boolean {

@@ -17,18 +17,16 @@ const DISCORD_TIMEOUT_MS = 5_000;
 const MAX_USER_NAME_LENGTH = 40;
 const hits = new Map<string, number[]>();
 
-const DEVICES = ['movil', 'tablet', 'ordenador'] as const;
-const PLATFORMS = [
-  'iPhone',
-  'iPad',
-  'Android',
-  'Windows',
-  'macOS',
-  'Linux',
-  'ChromeOS',
-  'Desconocido',
-] as const;
+const DEVICES = ['mobile', 'tablet', 'desktop'] as const;
+const PLATFORMS = ['iPhone', 'iPad', 'Android', 'Windows', 'macOS', 'Linux', 'ChromeOS'] as const;
 const LANGUAGES = ['es', 'en'] as const;
+
+const DEVICE_LABELS: Record<(typeof DEVICES)[number], string> = {
+  mobile: 'Móvil',
+  tablet: 'Tablet',
+  desktop: 'Ordenador',
+};
+const UNKNOWN_LABEL = 'Desconocido';
 
 type LogEventType = 'desktop' | 'cv' | 'linkedin';
 
@@ -64,17 +62,22 @@ function isRateLimited(ip: string): boolean {
   return timestamps.length > RATE_LIMIT;
 }
 
-function oneOf<T extends string>(allowed: readonly T[], value: unknown): T | 'desconocido' {
-  return allowed.includes(value as T) ? (value as T) : 'desconocido';
+function oneOf<T extends string>(allowed: readonly T[], value: unknown): T | undefined {
+  return allowed.includes(value as T) ? (value as T) : undefined;
+}
+
+function deviceLabel(value: unknown): string {
+  const device = oneOf(DEVICES, value);
+  return device ? DEVICE_LABELS[device] : UNKNOWN_LABEL;
 }
 
 function sanitizeUserName(value: unknown): string {
-  if (typeof value !== 'string') return 'desconocido';
+  if (typeof value !== 'string') return UNKNOWN_LABEL;
   const clean = value
     .replace(/[\u0000-\u001f`*_~|>@]/g, '')
     .trim()
     .slice(0, MAX_USER_NAME_LENGTH);
-  return clean || 'desconocido';
+  return clean || UNKNOWN_LABEL;
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -121,9 +124,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       color: config.color,
       fields: [
         { name: '👤 Usuario', value: sanitizeUserName(userName), inline: true },
-        { name: '📱 Dispositivo', value: oneOf(DEVICES, device), inline: true },
-        { name: '💻 Plataforma', value: oneOf(PLATFORMS, platform), inline: true },
-        { name: '🌐 Idioma', value: oneOf(LANGUAGES, lang), inline: true },
+        { name: '📱 Dispositivo', value: deviceLabel(device), inline: true },
+        { name: '💻 Plataforma', value: oneOf(PLATFORMS, platform) ?? UNKNOWN_LABEL, inline: true },
+        { name: '🌐 Idioma', value: oneOf(LANGUAGES, lang) ?? UNKNOWN_LABEL, inline: true },
       ],
       footer: { text: timestamp },
     };

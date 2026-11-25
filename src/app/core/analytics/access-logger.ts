@@ -36,7 +36,7 @@ export class AccessLogger {
   private send(event: LogEventType): void {
     const info: AccessInfo = {
       event,
-      userName: this.userSession.getUserName() || 'desconocido',
+      userName: this.userSession.getUserName(),
       device: this.deviceDetector.category(),
       platform: this.deviceDetector.platform(),
       lang: this.languageSettings.currentLang(),
