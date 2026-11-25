@@ -87,8 +87,7 @@
       "emailLabel": "Email",
       "focusLabel": "Especialización",
       "birthLabel": "Fecha de nacimiento",
-      "birthValue": "03/07/2000",
-      "phoneLabel": "Telefono"
+      "birthValue": "03/07/2000"
     },
     "skills": {
       "title": "Stack principal"
@@ -125,8 +124,7 @@
       "go": "Ir"
     },
     "actions": {
-      "openSite": "Abrir sitio",
-      "viewCode": "Ver código"
+      "openSite": "Abrir sitio"
     },
     "status": {
       "ready": "Listo",
