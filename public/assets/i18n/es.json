@@ -16,7 +16,9 @@
       "language": "Idioma",
       "logout": "Cerrar sesión",
       "turnOffComputer": "Apagar equipo",
-      "viewCode": "Ver código"
+      "viewCode": "Ver código",
+      "minimize": "Minimizar",
+      "close": "Cerrar"
     },
     "status": {
       "loading": "Cargando...",
@@ -86,6 +88,7 @@
       "locationValue": "Mérida, Extremadura, España",
       "emailLabel": "Email",
       "focusLabel": "Especialización",
+      "focusValue": "Full Stack",
       "birthLabel": "Fecha de nacimiento",
       "birthValue": "03/07/2000"
     },
@@ -180,6 +183,7 @@
   "commandPrompt": {
     "title": "Datos, IA y Servicios",
     "banner": "Adrianpmdev XP [Versión 1.0]",
+    "copyright": "(C) 2026 adrianpmdev.",
     "path": "C:\\Proyectos",
     "hint": "Haz clic en un proyecto para ver su README.",
     "labels": {
@@ -217,6 +221,15 @@
 
   "minesweeper": {
     "title": "Buscaminas",
-    "touchHint": "Mantén pulsado para poner/quitar una bandera."
+    "flagHint": "Clic derecho, mantener pulsado o tecla F para poner/quitar una bandera.",
+    "newGame": "Nueva partida",
+    "cell": {
+      "hidden": "Fila {{row}}, columna {{col}}, tapada",
+      "flagged": "Fila {{row}}, columna {{col}}, bandera",
+      "mine": "Fila {{row}}, columna {{col}}, mina",
+      "empty": "Fila {{row}}, columna {{col}}, vacía",
+      "oneMine": "Fila {{row}}, columna {{col}}, 1 mina cerca",
+      "mines": "Fila {{row}}, columna {{col}}, {{count}} minas cerca"
+    }
   }
 }

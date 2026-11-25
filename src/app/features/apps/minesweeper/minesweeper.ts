@@ -2,7 +2,7 @@
  * Minesweeper
  *
  * Minesweeper app view over MinesweeperEngine: handles clicks, touch
- * long-press flagging and the timer.
+ * long-press and keyboard flagging, cell labels and the timer.
  *
  * @author adrianpmdev
  */
@@ -111,7 +111,15 @@ export class Minesweeper {
     return cell.adjacent > 0 ? String(cell.adjacent) : '';
   }
 
-  private toggleFlag(r: number, c: number): void {
+  protected cellLabelKey(cell: MinesweeperCell): string {
+    if (!cell.revealed)
+      return cell.flagged ? 'minesweeper.cell.flagged' : 'minesweeper.cell.hidden';
+    if (cell.mine) return 'minesweeper.cell.mine';
+    if (cell.adjacent === 0) return 'minesweeper.cell.empty';
+    return cell.adjacent === 1 ? 'minesweeper.cell.oneMine' : 'minesweeper.cell.mines';
+  }
+
+  protected toggleFlag(r: number, c: number): void {
     this.game.toggleFlag(r, c);
     this.refresh();
   }

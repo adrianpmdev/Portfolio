@@ -174,7 +174,7 @@
   color: #7f7f7f;
 }
 
-.ms-touch-hint {
+.ms-flag-hint {
   display: block;
 
   width: calc(var(--cols) * var(--cell-size));
@@ -191,7 +191,7 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
-  .ms-touch-hint {
+  .ms-flag-hint {
     display: block;
   }
 }
@@ -277,7 +277,7 @@
     margin-inline: auto;
   }
 
-  .ms-touch-hint {
+  .ms-flag-hint {
     margin-top: 8px;
   }
 }
@@ -316,7 +316,7 @@
     font-size: 16px;
   }
 
-  .ms-touch-hint {
+  .ms-flag-hint {
     font-size: 11px;
   }
 }

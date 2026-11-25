@@ -16,7 +16,9 @@
       "language": "Language",
       "logout": "Log out",
       "turnOffComputer": "Turn off computer",
-      "viewCode": "View code"
+      "viewCode": "View code",
+      "minimize": "Minimize",
+      "close": "Close"
     },
     "status": {
       "loading": "Loading...",
@@ -86,6 +88,7 @@
       "locationValue": "Mérida, Extremadura, Spain",
       "emailLabel": "Email",
       "focusLabel": "Specialization",
+      "focusValue": "Full Stack",
       "birthLabel": "Date of birth",
       "birthValue": "03/07/2000"
     },
@@ -180,6 +183,7 @@
   "commandPrompt": {
     "title": "Data, AI & Services",
     "banner": "Adrianpmdev XP [Version 1.0]",
+    "copyright": "(C) 2026 adrianpmdev.",
     "path": "C:\\Projects",
     "hint": "Click a project to read its README.",
     "labels": {
@@ -217,6 +221,15 @@
 
   "minesweeper": {
     "title": "Minesweeper",
-    "touchHint": "Press and hold to place/remove a flag."
+    "flagHint": "Right-click, press and hold or press F to place/remove a flag.",
+    "newGame": "New game",
+    "cell": {
+      "hidden": "Row {{row}}, column {{col}}, hidden",
+      "flagged": "Row {{row}}, column {{col}}, flagged",
+      "mine": "Row {{row}}, column {{col}}, mine",
+      "empty": "Row {{row}}, column {{col}}, empty",
+      "oneMine": "Row {{row}}, column {{col}}, 1 mine nearby",
+      "mines": "Row {{row}}, column {{col}}, {{count}} mines nearby"
+    }
   }
 }

@@ -1,7 +1,14 @@
 <div class="ms-frame">
   <div class="ms-top">
     <div class="ms-counter">{{ view().flagsLeft }}</div>
-    <button type="button" class="ms-face" (click)="newGame()">{{ face() }}</button>
+    <button
+      type="button"
+      class="ms-face"
+      [attr.aria-label]="'minesweeper.newGame' | translate"
+      (click)="newGame()"
+    >
+      {{ face() }}
+    </button>
     <div class="ms-counter">{{ formattedTimer() }}</div>
   </div>
 
@@ -23,7 +30,11 @@
             [class.n6]="cell.revealed && cell.adjacent === 6"
             [class.n7]="cell.revealed && cell.adjacent === 7"
             [class.n8]="cell.revealed && cell.adjacent === 8"
+            [attr.aria-label]="
+              cellLabelKey(cell) | translate: { row: r + 1, col: c + 1, count: cell.adjacent }
+            "
             (click)="revealCell(r, c)"
+            (keydown.f)="toggleFlag(r, c)"
             (contextmenu)="flagCell($event, r, c)"
             (touchstart)="startLongPress($event, r, c)"
             (touchend)="endLongPress($event, r, c)"
@@ -36,5 +47,5 @@
     }
   </div>
 
-  <p class="ms-touch-hint">{{ 'minesweeper.touchHint' | translate }}</p>
+  <p class="ms-flag-hint">{{ 'minesweeper.flagHint' | translate }}</p>
 </div>

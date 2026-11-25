@@ -2,8 +2,20 @@
   <span class="xp-window__title">{{ desktopWindow().app.titleKey | translate }}</span>
 
   <div class="xp-window__actions">
-    <button type="button" class="xp-win-btn" (click)="minimizeClick.emit()">_</button>
-    <button type="button" class="xp-win-btn xp-win-btn--close" (click)="closeClick.emit()">
+    <button
+      type="button"
+      class="xp-win-btn"
+      [attr.aria-label]="'common.actions.minimize' | translate"
+      (click)="minimizeClick.emit()"
+    >
+      _
+    </button>
+    <button
+      type="button"
+      class="xp-win-btn xp-win-btn--close"
+      [attr.aria-label]="'common.actions.close' | translate"
+      (click)="closeClick.emit()"
+    >
       x
     </button>
   </div>
