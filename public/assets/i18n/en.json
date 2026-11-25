@@ -101,12 +101,16 @@
     "career": {
       "title": "Experience and Education",
       "experienceTitle": "Experience",
-      "experience1": "Liser.es - Freelance Backend Developer (Jul 2026 - Present).",
-      "experience2": "DCH Marketing - Freelance Full Stack Developer (Jan 2026 - Present).",
-      "experience3": "Plexus Tech - W2M Academy - Internship (May - Jun 2025 · Mar - Jun 2026).",
+      "experience": {
+        "liser": "Liser.es - Freelance Backend Developer (Jul 2026 - Present).",
+        "dchMarketing": "DCH Marketing - Freelance Full Stack Developer (Jan 2026 - Present).",
+        "plexusTech": "Plexus Tech - W2M Academy - Internship (May - Jun 2025 · Mar - Jun 2026)."
+      },
       "educationTitle": "Education",
-      "education1": "Higher Technician Diploma in Multiplatform Application Development (Honor Distinction) (2024 - 2026).",
-      "education2": "Specialization Course in Artificial Intelligence and Big Data (2026 - Present)."
+      "education": {
+        "dam": "Higher Technician Diploma in Multiplatform Application Development (Honor Distinction) (2024 - 2026).",
+        "aiBigData": "Specialization Course in Artificial Intelligence and Big Data (2026 - Present)."
+      }
     }
   },
 

@@ -153,9 +153,9 @@
                   {{ 'myPc.career.experienceTitle' | translate }}
                 </strong>
               </p>
-              <p>{{ 'myPc.career.experience1' | translate }}</p>
-              <p>{{ 'myPc.career.experience2' | translate }}</p>
-              <p>{{ 'myPc.career.experience3' | translate }}</p>
+              @for (experienceKey of career.experienceKeys; track experienceKey) {
+                <p>{{ experienceKey | translate }}</p>
+              }
             </div>
 
             <div>
@@ -164,8 +164,9 @@
                   {{ 'myPc.career.educationTitle' | translate }}
                 </strong>
               </p>
-              <p>{{ 'myPc.career.education1' | translate }}</p>
-              <p>{{ 'myPc.career.education2' | translate }}</p>
+              @for (educationKey of career.educationKeys; track educationKey) {
+                <p>{{ educationKey | translate }}</p>
+              }
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { TranslatePipe } from '@ngx-translate/core';
 import { AccessLogger } from '../../../core/analytics/access-logger';
 import { PROFILE } from '../../../shared/profile/profile-data';
+import { CAREER } from './career-data';
 import { SKILLS } from './skills-data';
 
 @Component({
@@ -28,6 +29,7 @@ export class MyPc {
 
   protected readonly profile = PROFILE;
   protected readonly skills = SKILLS;
+  protected readonly career = CAREER;
   protected readonly isMenuOpen = signal(false);
 
   protected toggleMenu(): void {

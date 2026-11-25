@@ -101,12 +101,16 @@
     "career": {
       "title": "Experiencia y estudios",
       "experienceTitle": "Experiencia",
-      "experience1": "Liser.es - Desarrollador Backend freelance (jul. 2026 - Actualidad).",
-      "experience2": "DCH Marketing - Desarrollador Full Stack freelance (ene. 2026 - Actualidad).",
-      "experience3": "Plexus Tech - W2M Academy - Prácticas (may. - jun. 2025 · mar. - jun. 2026).",
+      "experience": {
+        "liser": "Liser.es - Desarrollador Backend freelance (jul. 2026 - Actualidad).",
+        "dchMarketing": "DCH Marketing - Desarrollador Full Stack freelance (ene. 2026 - Actualidad).",
+        "plexusTech": "Plexus Tech - W2M Academy - Prácticas (may. - jun. 2025 · mar. - jun. 2026)."
+      },
       "educationTitle": "Estudios",
-      "education1": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (Matrícula de Honor) (2024 - 2026).",
-      "education2": "Curso de Especialización en Inteligencia Artificial y Big Data (2026 - Actualidad)."
+      "education": {
+        "dam": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (Matrícula de Honor) (2024 - 2026).",
+        "aiBigData": "Curso de Especialización en Inteligencia Artificial y Big Data (2026 - Actualidad)."
+      }
     }
   },
 

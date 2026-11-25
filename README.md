@@ -130,7 +130,8 @@ src/app/
         ├── app-window.ts             # Window context provided to each app
         ├── my-pc/
         │   ├── my-pc-manifest.ts
-        │   └── skills-data.ts
+        │   ├── skills-data.ts             # Main stack
+        │   └── career-data.ts             # Experience and education
         ├── internet-explorer/
         │   ├── internet-explorer-manifest.ts
         │   └── web-projects-data.ts       # Web projects
