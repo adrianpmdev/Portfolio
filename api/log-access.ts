@@ -7,7 +7,25 @@
  * @author adrianpmdev
  */
 
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { IncomingHttpHeaders } from 'node:http';
+
+interface LogAccessRequest {
+  method?: string;
+  headers: IncomingHttpHeaders;
+  body?: {
+    event?: unknown;
+    userName?: unknown;
+    device?: unknown;
+    platform?: unknown;
+    lang?: unknown;
+  };
+}
+
+interface LogAccessResponse {
+  status(code: number): LogAccessResponse;
+  json(body: unknown): void;
+  end(): void;
+}
 
 const PRODUCTION_ORIGIN = 'https://adrianpmdev-portfolio.vercel.app';
 
@@ -80,7 +98,7 @@ function sanitizeUserName(value: unknown): string {
   return clean || UNKNOWN_LABEL;
 }
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: LogAccessRequest, res: LogAccessResponse) {
   try {
     if (req.method !== 'POST') {
       res.status(405).json({ error: 'Method not allowed' });
