@@ -28,7 +28,7 @@ const PLATFORMS = [
   'ChromeOS',
   'Desconocido',
 ] as const;
-const LANGUAGES = ['es', 'en', 'fr'] as const;
+const LANGUAGES = ['es', 'en'] as const;
 
 type LogEventType = 'desktop' | 'cv' | 'linkedin';
 

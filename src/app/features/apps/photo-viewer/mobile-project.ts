@@ -16,5 +16,6 @@ export interface MobileProject {
   platform: 'Android' | 'iOS';
   status: ProjectStatus;
   description: string;
+  repoUrl?: string;
   shots: MobileShot[];
 }

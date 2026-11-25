@@ -103,6 +103,17 @@
         <p class="pv-project-description">
           {{ selectedProject().description | translate }}
         </p>
+
+        @if (selectedProject().repoUrl) {
+          <a
+            class="pv-repo-link"
+            [href]="selectedProject().repoUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ 'common.actions.viewCode' | translate }}
+          </a>
+        }
       </div>
     </aside>
 

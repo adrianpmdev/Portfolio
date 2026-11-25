@@ -11,8 +11,9 @@ import { Profile } from './profile';
 
 export const PROFILE: Profile = {
   fullName: 'Adrián Pérez Morales',
-  email: 'adrianperez936@gmail.com',
+  email: 'adrian.perezmor@gmail.com',
   githubUrl: 'https://github.com/adrianpmdev',
   linkedinUrl: 'https://www.linkedin.com/in/adrianpmdev',
-  cvUrl: '/assets/docs/Adrian_Perez.pdf',
+  cvUrl: '/assets/docs/CV Adrián Pérez.pdf',
+  detailedCvUrl: '/assets/docs/CV Adrián Pérez Detallado.pdf',
 };

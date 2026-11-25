@@ -18,6 +18,7 @@ export const WEB_PROJECTS: readonly WebProject[] = [
     status: 'online',
     deployUrl: 'https://null-pointers-devs.github.io/The-Witcher-JS/',
     previewSrc: '/assets/images/webs/project1.webp',
+    repoUrl: 'https://github.com/null-pointers-devs/The-Witcher-JS',
     stack: ['HTML', 'CSS', 'JS'],
   },
   {
@@ -27,6 +28,7 @@ export const WEB_PROJECTS: readonly WebProject[] = [
     status: 'online',
     deployUrl: 'https://adrianpmdev-portfolio.vercel.app',
     previewSrc: '/assets/images/webs/project2.webp',
+    repoUrl: 'https://github.com/adrianpmdev/Portfolio',
     stack: ['Angular', 'TypeScript', 'SCSS'],
   },
   {
@@ -36,6 +38,7 @@ export const WEB_PROJECTS: readonly WebProject[] = [
     status: 'online',
     deployUrl: 'https://eventvsmerida.vercel.app',
     previewSrc: '/assets/images/webs/project3.webp',
+    repoUrl: 'https://github.com/null-pointers-devs/EventvsMerida',
     stack: ['Angular', 'TypeScript', 'SCSS'],
   },
 ];

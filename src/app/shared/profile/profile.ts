@@ -12,4 +12,5 @@ export interface Profile {
   githubUrl: string;
   linkedinUrl: string;
   cvUrl: string;
+  detailedCvUrl: string;
 }

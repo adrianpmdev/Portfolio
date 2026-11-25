@@ -1,0 +1,165 @@
+:host {
+  display: block;
+  height: 100%;
+  min-height: 0;
+}
+
+.cmd-app {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 8px 10px 12px;
+  overflow-y: auto;
+  background: #000000;
+  color: #c0c0c0;
+  font-family: 'Lucida Console', Consolas, 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.cmd-line {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.cmd-line--command {
+  margin-top: 12px;
+}
+
+.cmd-hint {
+  margin-top: 8px;
+  color: #808080;
+}
+
+.cmd-dir,
+.cmd-list,
+.cmd-endpoints {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cmd-dir__item {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 6ch 16ch minmax(0, 1fr);
+  gap: 1ch;
+  padding: 1px 4px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: #1f1f1f;
+    color: #ffffff;
+    outline: none;
+  }
+}
+
+.cmd-dir__item--active {
+  background: #c0c0c0;
+  color: #000000;
+
+  &:hover,
+  &:focus-visible {
+    background: #ffffff;
+    color: #000000;
+  }
+}
+
+.cmd-dir__stack {
+  overflow-wrap: anywhere;
+}
+
+.cmd-readme {
+  margin-top: 4px;
+}
+
+.cmd-heading {
+  margin-top: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.cmd-indent,
+.cmd-list li,
+.cmd-endpoints li {
+  padding-left: 2ch;
+  overflow-wrap: anywhere;
+}
+
+.cmd-list li::before {
+  content: '- ';
+}
+
+.cmd-endpoints__method {
+  display: inline-block;
+  min-width: 5ch;
+  color: #ffff00;
+}
+
+.cmd-repo-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #00ffff;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    background: #00ffff;
+    color: #000000;
+    outline: none;
+  }
+}
+
+.cmd-cursor {
+  display: inline-block;
+  width: 1ch;
+  height: 2px;
+  margin-left: 2px;
+  background: #c0c0c0;
+  vertical-align: baseline;
+  animation: cmd-blink 1s steps(1) infinite;
+}
+
+@keyframes cmd-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cmd-app {
+    font-size: 12px;
+  }
+
+  .cmd-dir__item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 4px;
+  }
+
+  .cmd-dir__type {
+    display: none;
+  }
+
+  .cmd-dir__stack {
+    color: #808080;
+  }
+
+  .cmd-dir__item--active .cmd-dir__stack {
+    color: #000000;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cmd-cursor {
+    animation: none;
+  }
+}

@@ -15,7 +15,8 @@
       "help": "Ayuda",
       "language": "Idioma",
       "logout": "Cerrar sesión",
-      "turnOffComputer": "Apagar equipo"
+      "turnOffComputer": "Apagar equipo",
+      "viewCode": "Ver código"
     },
     "status": {
       "loading": "Cargando...",
@@ -73,12 +74,13 @@
       "linkedin": "Ver Linkedin",
       "github": "Ver Github",
       "contact": "Contactar",
-      "cv": "Descargar CV"
+      "cv": "Descargar CV",
+      "detailedCv": "Descargar CV detallado"
     },
     "profile": {
       "title": "Información profesional",
-      "roleValue": "Desarrollador Multiplataforma",
-      "bio": "Me gusta llevar una idea hasta producción: diseñar la base de datos, montar la API, construir el frontend y que la app acabe en el móvil de alguien.\n\nSoy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM) y desarrollador Full Stack junior. Ahora mismo estoy cursando una especialización presencial en Inteligencia Artificial y Big Data, y por mi cuenta aprendo desarrollo de videojuegos con Godot.\n\n🔹 Proyecto del que más orgulloso estoy: Eventvs Mérida\nApp móvil que reúne la agenda cultural y de ocio de Mérida en un solo sitio. La desarrollamos en equipo de tres como proyecto final: app en Flutter, API REST en Spring Boot, base de datos en Supabase, panel de administración y landing web en Angular, y scripts de apoyo en Python. Más de 600 commits y desplegada en producción.\n\n🔹 Portfolio estilo Windows XP\nMi portfolio recrea la experiencia de Windows XP en el navegador, hecho con Angular. Si quieres conocer mi trabajo, empieza por ahí 😉\n\n🛠️ Stack: Java · Spring Boot · Python · Angular · Flutter/Dart · Supabase · Firebase · Git · Vercel · Render\n\nBusco mi siguiente oportunidad como desarrollador Full Stack, Backend o Mobile, donde pueda aportar desde el primer día y seguir aprendiendo con un buen equipo.\n\n🌐 Portfolio: adrianpmdev-portfolio.vercel.app\n💻 GitHub: github.com/adrianpmdev\n📩 Escríbeme por aquí, respondo rápido.",
+      "roleValue": "Desarrollador Full Stack",
+      "bio": "Desarrollador Full Stack en Mérida. Trabajo con Java y Spring Boot en el backend, Angular en el frontend, Flutter en móvil y Python con FastAPI para servicios internos y automatización.\n\nTécnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM) con Matrícula de Honor. Ahora curso la especialización en Inteligencia Artificial y Big Data y, por mi cuenta, aprendo desarrollo de videojuegos con Godot Engine y GDScript.\n\nAquí encontrarás mis proyectos web, móviles, de backend y de datos, cada uno con su código en GitHub.",
       "detailsTitle": "Datos básicos",
       "locationLabel": "Ubicación",
       "locationValue": "Mérida, Extremadura, España",
@@ -94,12 +96,14 @@
     "languages": {
       "title": "Idiomas",
       "spanish": "Español - Nativo",
-      "english": "Inglés - Alto (sin certificación oficial)"
+      "english": "Inglés - Avanzado"
     },
     "career": {
       "title": "Experiencia y estudios",
       "experienceTitle": "Experiencia",
-      "experience1": "Plexus Tech - Prácticas (2025 - 2026)",
+      "experience1": "Liser.es - Desarrollador Backend freelance (jul. 2026 - Actualidad).",
+      "experience2": "DCH Marketing - Desarrollador Full Stack freelance (ene. 2026 - Actualidad).",
+      "experience3": "Plexus Tech - W2M Academy - Prácticas (may. - jun. 2025 · mar. - jun. 2026).",
       "educationTitle": "Estudios",
       "education1": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (Matrícula de Honor) (2024 - 2026).",
       "education2": "Curso de Especialización en Inteligencia Artificial y Big Data (2026 - Actualidad)."
@@ -168,6 +172,44 @@
       "events": "Pantalla de eventos guardados",
       "account": "Pantalla de cuenta",
       "details": "Pantalla de detalles de eventos"
+    }
+  },
+
+  "commandPrompt": {
+    "title": "Datos, IA y Servicios",
+    "banner": "Adrianpmdev XP [Versión 1.0]",
+    "path": "C:\\Proyectos",
+    "hint": "Haz clic en un proyecto para ver su README.",
+    "labels": {
+      "stack": "Stack",
+      "features": "Funcionalidades",
+      "endpoints": "Endpoints"
+    },
+    "projects": {
+      "linkChecker": {
+        "description": "Servicio interno para una tienda online que comprueba periódicamente que los enlaces de los productos siguen funcionando y avisa de los que están rotos.",
+        "features": {
+          "scheduled": "Comprobación automática y periódica de los enlaces de todos los productos.",
+          "history": "Registro del código HTTP, si el enlace está roto y la fecha de la última comprobación.",
+          "onDemand": "Comprobación bajo demanda y API documentada con Swagger."
+        }
+      },
+      "clickReports": {
+        "description": "Servicio interno para una tienda online que registra los clics en los productos y los convierte en estadísticas sencillas.",
+        "features": {
+          "register": "Endpoint para registrar los clics en cada producto.",
+          "stats": "Total de clics por producto y clics por día, con filtro por producto.",
+          "csv": "Exportación de un reporte CSV con Pandas."
+        }
+      },
+      "steamGames": {
+        "description": "Análisis Big Data de los juegos de Steam lanzados entre 2020 y 2025 para decidir qué género y categoría debería desarrollar un estudio de videojuegos.",
+        "features": {
+          "dataset": "Dataset propio de unos 81.000 juegos, descargado desde la API de Steam.",
+          "questions": "Relación entre éxito y competencia por género, evolución de la oferta, precio y multijugador.",
+          "preparation": "Documentación de la recopilación y preparación de los datos."
+        }
+      }
     }
   },
 

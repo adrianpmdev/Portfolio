@@ -81,7 +81,7 @@ The project combines a retro interface (**boot screen, login, desktop, windows a
 | ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)                               | Styling                                                               |
 | ![Angular Material](https://img.shields.io/badge/Angular_Material-009688?style=flat-square&logo=angular&logoColor=white)    | UI components (menus, progress bars, ripples)                         |
 | ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=black)                          | Animations                                                            |
-| ![ngx-translate](https://img.shields.io/badge/ngx--translate-4285F4?style=flat-square&logo=googletranslate&logoColor=white) | Internationalization (🇪🇸 ES / 🇬🇧 EN / 🇫🇷 FR)                          |
+| ![ngx-translate](https://img.shields.io/badge/ngx--translate-4285F4?style=flat-square&logo=googletranslate&logoColor=white) | Internationalization (🇪🇸 ES / 🇬🇧 EN)                                  |
 | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)                         | Hosting and serverless function that forwards visit events to Discord |
 | ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white)                         | Linting with angular-eslint rules                                     |
 | ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=black)                   | Code formatting                                                       |
@@ -137,13 +137,16 @@ src/app/
         ├── photo-viewer/
         │   ├── photo-viewer-manifest.ts
         │   └── mobile-projects-data.ts    # Mobile projects
+        ├── command-prompt/
+        │   ├── command-prompt-manifest.ts
+        │   └── console-projects-data.ts   # Projects without a UI (APIs, data)
         └── minesweeper/
             ├── minesweeper-manifest.ts
             └── minesweeper-engine.ts      # Game logic, UI-independent
 ```
 
 - 🧩 **Pluggable apps**: each app lives in its own folder with a manifest (`<app>-manifest.ts`). Adding one means creating its folder and listing its manifest in `features/apps/app-registry.ts`; the desktop, Start menu and taskbar pick it up automatically and its code is lazy-loaded.
-- 🗂️ **Data-driven projects**: web and mobile projects live in `features/apps/internet-explorer/web-projects-data.ts` and `features/apps/photo-viewer/mobile-projects-data.ts`, so adding a project doesn't require touching any component.
+- 🗂️ **Data-driven projects**: web, mobile and UI-less projects (APIs, internal services, data analysis) live in `features/apps/internet-explorer/web-projects-data.ts`, `features/apps/photo-viewer/mobile-projects-data.ts` and `features/apps/command-prompt/console-projects-data.ts`, so adding a project doesn't require touching any component.
 
 - 🔐 Client-side user session management to control the boot / login / desktop flow.
 - 🎭 Interface focused on the visual experience and the narrative of the portfolio.

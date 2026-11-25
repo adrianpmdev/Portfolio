@@ -17,6 +17,7 @@ export const MOBILE_PROJECTS: readonly MobileProject[] = [
     platform: 'Android',
     status: 'online',
     description: 'photoViewer.projects.spotify',
+    repoUrl: 'https://github.com/adrianpmdev/Spotify2',
     shots: [
       {
         id: 'a1',
@@ -75,6 +76,7 @@ export const MOBILE_PROJECTS: readonly MobileProject[] = [
     platform: 'Android',
     status: 'online',
     description: 'photoViewer.projects.eventvs',
+    repoUrl: 'https://github.com/null-pointers-devs/EventvsMerida',
     shots: [
       {
         id: 'b1',

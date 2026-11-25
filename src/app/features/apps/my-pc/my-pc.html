@@ -54,6 +54,15 @@
       <a [href]="profile.cvUrl" target="_blank" rel="noopener noreferrer" (click)="logCvDownload()">
         {{ 'myPc.links.cv' | translate }}
       </a>
+
+      <a
+        [href]="profile.detailedCvUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        (click)="logCvDownload()"
+      >
+        {{ 'myPc.links.detailedCv' | translate }}
+      </a>
     </div>
   </aside>
 
@@ -99,7 +108,7 @@
             <p>
               <span>🎯</span>
               <strong>{{ 'myPc.profile.focusLabel' | translate }}:</strong>
-              Backend
+              Full Stack
             </p>
           </div>
         </div>
@@ -145,6 +154,8 @@
                 </strong>
               </p>
               <p>{{ 'myPc.career.experience1' | translate }}</p>
+              <p>{{ 'myPc.career.experience2' | translate }}</p>
+              <p>{{ 'myPc.career.experience3' | translate }}</p>
             </div>
 
             <div>

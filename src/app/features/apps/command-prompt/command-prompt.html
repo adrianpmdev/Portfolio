@@ -1,0 +1,69 @@
+<div class="cmd-app">
+  <p class="cmd-line">{{ 'commandPrompt.banner' | translate }}</p>
+  <p class="cmd-line">(C) 2026 adrianpmdev.</p>
+
+  <p class="cmd-line cmd-line--command">{{ 'commandPrompt.path' | translate }}&gt; dir</p>
+
+  <ul class="cmd-dir" [attr.aria-label]="'common.projects' | translate">
+    @for (project of projects; track project.id) {
+      <li>
+        <button
+          type="button"
+          class="cmd-dir__item"
+          [class.cmd-dir__item--active]="project.id === selectedProjectId()"
+          [attr.aria-pressed]="project.id === selectedProjectId()"
+          (click)="selectProject(project.id)"
+        >
+          <span class="cmd-dir__type">&lt;DIR&gt;</span>
+          <span class="cmd-dir__name">{{ project.id }}</span>
+          <span class="cmd-dir__stack">{{ project.stack.join(' · ') }}</span>
+        </button>
+      </li>
+    }
+  </ul>
+
+  <p class="cmd-line cmd-hint">{{ 'commandPrompt.hint' | translate }}</p>
+
+  <p class="cmd-line cmd-line--command">
+    {{ 'commandPrompt.path' | translate }}&gt; type {{ selectedProject().id }}\README.txt
+  </p>
+
+  <section class="cmd-readme" aria-live="polite">
+    <p class="cmd-line">{{ selectedProject().descriptionKey | translate }}</p>
+
+    <p class="cmd-line cmd-heading">{{ 'commandPrompt.labels.stack' | translate }}</p>
+    <p class="cmd-line cmd-indent">{{ selectedProject().stack.join(', ') }}</p>
+
+    <p class="cmd-line cmd-heading">{{ 'commandPrompt.labels.features' | translate }}</p>
+    <ul class="cmd-list">
+      @for (featureKey of selectedProject().featureKeys; track featureKey) {
+        <li>{{ featureKey | translate }}</li>
+      }
+    </ul>
+
+    @if (selectedProject().endpoints; as endpoints) {
+      <p class="cmd-line cmd-heading">{{ 'commandPrompt.labels.endpoints' | translate }}</p>
+      <ul class="cmd-endpoints">
+        @for (endpoint of endpoints; track endpoint.method + endpoint.path) {
+          <li>
+            <span class="cmd-endpoints__method">{{ endpoint.method }}</span>
+            {{ endpoint.path }}
+          </li>
+        }
+      </ul>
+    }
+
+    <a
+      class="cmd-repo-link"
+      [href]="selectedProject().repoUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      [ {{ 'common.actions.viewCode' | translate }} ]
+    </a>
+  </section>
+
+  <p class="cmd-line cmd-line--command">
+    {{ 'commandPrompt.path' | translate }}&gt;<span class="cmd-cursor" aria-hidden="true"></span>
+  </p>
+</div>
