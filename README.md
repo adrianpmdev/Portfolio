@@ -5,12 +5,14 @@
 ### A personal portfolio that brings the Windows XP experience to the web
 
 ![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_the_portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://adrianpmdev-portfolio.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-adrianpmdev--portfolio.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://adrianpmdev-portfolio.vercel.app/)
 [![Author](https://img.shields.io/badge/Author-adrianpmdev-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/adrianpmdev)
+
+[Description](#-description) · [Screenshots](#-screenshots) · [Features](#-features) · [Tech Stack](#️-tech-stack) · [Project Approach](#️-project-approach) · [Project Structure](#-project-structure) · [Documentation](#-documentation) · [License](#-license)
 
 </div>
 
@@ -21,29 +23,6 @@
 ## 🌐 Live Demo
 
 👉 **[adrianpmdev-portfolio.vercel.app](https://adrianpmdev-portfolio.vercel.app/)**
-
----
-
-<br>
-
-## 📸 Screenshots
-
-<p align="center">
-  <img src="docs/screenshots/desktop-internet-explorer.webp" alt="XP desktop with the Internet Explorer app showing a web project" width="100%">
-</p>
-
-<table>
-  <tr>
-    <td width="40%"><img src="docs/screenshots/photo-viewer.webp" alt="Photo Viewer app showing screenshots of a mobile project"></td>
-    <td width="40%"><img src="docs/screenshots/start-menu.webp" alt="Start menu open over the My Data app"></td>
-    <td width="20%"><img src="docs/screenshots/mobile.webp" alt="Mobile layout with an app in fullscreen"></td>
-  </tr>
-  <tr>
-    <td align="center">Mobile projects in the Photo Viewer</td>
-    <td align="center">Start menu and profile</td>
-    <td align="center">Mobile layout</td>
-  </tr>
-</table>
 
 ---
 
@@ -61,12 +40,58 @@ The project combines a retro interface (**boot screen, login, desktop, windows a
 
 <br>
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/desktop-internet-explorer.webp" alt="XP desktop with the Web Pages app showing a web project" width="100%">
+</p>
+
+<table>
+  <tr>
+    <td width="40%"><img src="docs/screenshots/photo-viewer.webp" alt="Mobile Applications app showing screenshots of a mobile project"></td>
+    <td width="40%"><img src="docs/screenshots/data-ai-services.webp" alt="Data, AI &amp; Services app printing the README of a backend project"></td>
+    <td width="20%" rowspan="2"><img src="docs/screenshots/mobile.webp" alt="Mobile layout with the My Data app in fullscreen"></td>
+  </tr>
+  <tr>
+    <td align="center">Mobile projects in the Photo Viewer</td>
+    <td align="center">Projects without a UI in the console</td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="docs/screenshots/start-menu.webp" alt="Start menu open over the My Data app"></td>
+    <td align="center">Mobile layout</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">Start menu and profile</td>
+    <td></td>
+  </tr>
+</table>
+
+---
+
+<br>
+
 ## 🎯 Purpose
 
-- 🌟 Showcase personal projects through a more original and memorable experience than a traditional portfolio.
-- 🧩 Demonstrate frontend development skills with a modular architecture, strong typing and separation of responsibilities.
-- 🌍 Apply internationalization and animations to improve the user experience.
-- 🎨 Keep a consistent Windows XP-inspired aesthetic, adapted to a modern context.
+- 🌟 **Showcase** personal projects through a more original and memorable experience than a traditional portfolio.
+- 🧩 **Demonstrate** frontend development skills with a modular architecture, strong typing and separation of responsibilities.
+- 🌍 **Apply** internationalization and animations to improve the user experience.
+- 🎨 **Keep** a consistent Windows XP-inspired aesthetic, adapted to a modern context.
+
+---
+
+<br>
+
+## 🚀 Features
+
+- 🖥️ **XP experience**: boot screen, login, desktop with windows, taskbar and Start menu.
+- 👤 **My Data**: profile, main stack, experience and education, contact links and two CVs (summary and detailed).
+- 🌐 **Web Pages**: web projects with a preview, a link to the live site and a link to the code.
+- 📱 **Mobile Applications**: screenshots of the mobile apps with thumbnails, zoom and keyboard shortcuts.
+- 💻 **Data, AI & Services**: projects without a user interface (APIs, internal services, data analysis) shown as a console README.
+- 💣 **Minesweeper**: playable with the mouse, touch screens and the keyboard.
+- 🌍 **Two languages**: Spanish and English, switched without reloading the page.
+- ♿ **Accessible and responsive**: fully usable with the keyboard; on phones, windows open fullscreen.
+- 🔔 **Visit notifications**: desktop visits, CV downloads and LinkedIn clicks are forwarded to Discord by a Vercel function.
 
 ---
 
@@ -85,6 +110,7 @@ The project combines a retro interface (**boot screen, login, desktop, windows a
 | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)                         | Hosting and serverless function that forwards visit events to Discord |
 | ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white)                         | Linting with angular-eslint rules                                     |
 | ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=black)                   | Code formatting                                                       |
+| ![sharp](https://img.shields.io/badge/sharp-99CC00?style=flat-square&logo=sharp&logoColor=black)                            | Image conversion to WebP (`npm run images`)                           |
 
 ---
 
@@ -92,10 +118,37 @@ The project combines a retro interface (**boot screen, login, desktop, windows a
 
 ## 🏗️ Project Approach
 
-- 🧱 Architecture based on **standalone components**, following the official [Angular style guide](https://angular.dev/style-guide) (feature folders, no type suffixes).
-- 📂 Code organized in `core`, `shared` and `features`:
+| Folder           | Content                                                                      |
+| ---------------- | ---------------------------------------------------------------------------- |
+| `core/`          | App-wide singletons with no UI: analytics, device, fullscreen, i18n, session |
+| `shared/`        | Pieces used by several features: author profile, project status and its pipe |
+| `features/`      | Boot, login and desktop routes, and the desktop apps                         |
+| `features/apps/` | One folder per app, each with its manifest and its data files                |
 
+```mermaid
+flowchart LR
+    Boot[Boot screen] --> Login
+    Login --> Desktop
+    Desktop --> Apps[Desktop apps]
+    Desktop -. visit events .-> Function[Vercel function]
+    Function --> Discord
 ```
+
+- 🧱 **Standalone components**, following the official [Angular style guide](https://angular.dev/style-guide) (feature folders, no type suffixes).
+- 🧩 **Pluggable apps**: each app lives in its own folder with a manifest (`<app>-manifest.ts`). Adding one means creating its folder and listing its manifest in `features/apps/app-registry.ts`; the desktop, Start menu and taskbar pick it up automatically and its code is lazy-loaded.
+- 🗂️ **Data-driven content**: web, mobile and UI-less projects, experience and education, and the main stack live in typed `*-data.ts` files, so adding content doesn't require touching any component.
+- 🔐 **Client-side session**: the stored user name controls the boot / login / desktop flow.
+- 🎭 **Visual narrative**: the interface is focused on the visual experience of the portfolio.
+- 📱 **Responsive design**: on mobile, windows are displayed fullscreen and stacked, like native app screens.
+- ⚡ **Zoneless, signals and OnPush**: the app runs without `zone.js`; component state lives in signals and every component uses `OnPush` change detection.
+
+---
+
+<br>
+
+## 📁 Project Structure
+
+```text
 src/app/
 ├── app.ts · app.config.ts · app.routes.ts
 │
@@ -146,46 +199,15 @@ src/app/
             └── minesweeper-engine.ts      # Game logic, UI-independent
 ```
 
-- 🧩 **Pluggable apps**: each app lives in its own folder with a manifest (`<app>-manifest.ts`). Adding one means creating its folder and listing its manifest in `features/apps/app-registry.ts`; the desktop, Start menu and taskbar pick it up automatically and its code is lazy-loaded.
-- 🗂️ **Data-driven projects**: web, mobile and UI-less projects (APIs, internal services, data analysis) live in `features/apps/internet-explorer/web-projects-data.ts`, `features/apps/photo-viewer/mobile-projects-data.ts` and `features/apps/command-prompt/console-projects-data.ts`, so adding a project doesn't require touching any component.
-
-- 🔐 Client-side user session management to control the boot / login / desktop flow.
-- 🎭 Interface focused on the visual experience and the narrative of the portfolio.
-- 📱 **Responsive design**: on mobile, windows are displayed fullscreen and stacked, like native app screens.
-- ⚡ **Zoneless, signals and OnPush**: the app runs without `zone.js`; component state lives in signals and every component uses `OnPush` change detection.
-
 ---
 
 <br>
 
-## 🧑‍💻 Development
+## 📚 Documentation
 
-| Command                | What it does                            |
-| ---------------------- | --------------------------------------- |
-| `npm start`            | Dev server at `http://localhost:4200`   |
-| `npm run build`        | Production build in `dist/`             |
-| `npm run lint`         | ESLint with angular-eslint rules        |
-| `npm run format`       | Format the project with Prettier        |
-| `npm run format:check` | Check formatting without changing files |
-| `npm run images`       | Convert new or replaced images to WebP  |
-
-### 🖼️ Adding or replacing images
-
-1. Drop the image (PNG, JPG, GIF, TIFF or AVIF) into its folder under `public/assets/images/`. To replace an image, use the same name as the current `.webp` (for example `project1.png` replaces `project1.webp`).
-2. Run `npm run images` (add `-- --dry-run` to preview it first). Each image is resized, converted to WebP and the original is deleted.
-3. Reference the `.webp` file in the code; the command lists any file that still points to the original name.
-
-| Folder                   | Result                             |
-| ------------------------ | ---------------------------------- |
-| `system/apps/`           | App icon, 144 × 144 px             |
-| `webs/`                  | Web project preview, 1280 px wide  |
-| `mobile/`                | Mobile screenshot, full resolution |
-| `system/background_xp.*` | Desktop background, 2560 px wide   |
-| `system/logo_xp.*`       | Logo, 440 px wide                  |
-| `system/avatar_xp.*`     | Avatar, 256 × 256 px               |
-| Anywhere else            | Up to 1920 px wide                 |
-
-The favicon, the Apple touch icon and the Open Graph image keep their PNG/JPG format and are never converted.
+| Document                                                                 | Content                                                                                                                           |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| [Technical Manual](docs/Portfolio%20%E2%80%94%20Technical%20Manual.docx) | Architecture, desktop shell and apps, translations, event logging, tooling, setup and deployment, and how to add apps and content |
 
 ---
 
@@ -193,7 +215,7 @@ The favicon, the Apple touch icon and the Open Graph image keep their PNG/JPG fo
 
 ## 📄 License
 
-Source code licensed under the **MIT License**. Personal content and Windows XP assets are excluded. See [LICENSE](LICENSE) for details.
+Source code licensed under the **MIT License**. Personal content and Windows XP assets are excluded. See [LICENSE](LICENSE) and [NOTICE](NOTICE) for details.
 
 ---
 
