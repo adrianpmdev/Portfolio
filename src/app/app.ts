@@ -1,15 +1,14 @@
 /**
  * App
  *
- * Root component. Initializes the active language; page cross-fades are
- * handled by the router through the View Transitions API.
+ * Root component. Hosts the router outlet; page cross-fades are handled by the
+ * router through the View Transitions API.
  *
  * @author adrianpmdev
  */
 
-import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LanguageSettings } from './core/i18n/language-settings';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +17,4 @@ import { LanguageSettings } from './core/i18n/language-settings';
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class App implements OnInit {
-  private readonly languageSettings = inject(LanguageSettings);
-
-  ngOnInit(): void {
-    this.languageSettings.initLang();
-  }
-}
+export class App {}

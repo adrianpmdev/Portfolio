@@ -1,13 +1,15 @@
 /**
  * LanguageSettings
  *
- * Resolves the initial language, changes it and persists the user's choice.
+ * Resolves the initial language, loads it before the app renders, changes it
+ * and persists the user's choice.
  *
  * @author adrianpmdev
  */
 
 import { DOCUMENT, Injectable, inject, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable, catchError, of } from 'rxjs';
 import { DEFAULT_LANGUAGE, Language, isLanguage } from './language';
 
 @Injectable({ providedIn: 'root' })
@@ -20,15 +22,15 @@ export class LanguageSettings {
 
   readonly currentLang = this.currentLangState.asReadonly();
 
-  initLang(): void {
-    this.setLang(this.currentLang());
+  initLang(): Observable<unknown> {
+    return this.setLang(this.currentLang()).pipe(catchError(() => of(null)));
   }
 
-  setLang(lang: Language): void {
+  setLang(lang: Language): Observable<unknown> {
     this.currentLangState.set(lang);
     localStorage.setItem(this.storageKey, lang);
     this.document.documentElement.lang = lang;
-    this.translate.use(lang);
+    return this.translate.use(lang);
   }
 
   private resolveInitialLang(): Language {
